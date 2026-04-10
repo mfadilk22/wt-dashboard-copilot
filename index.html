@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Pak Hemy] Technical - Internal Use</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <!-- Header -->
+        <div class="mb-8 pb-4 border-b-2 border-gray-200">
+            <h1 class="text-3xl font-bold text-gray-900">[Pak Hemy] Technical - Internal Use</h1>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="flex flex-wrap gap-0 mb-8 border-b border-gray-300" id="tabNav">
+            <button class="tab-btn active px-6 py-3 font-semibold text-sm border-b-2 border-blue-600 text-blue-600 hover:text-blue-700 transition" data-tab="overview">Overview</button>
+            <button class="tab-btn px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition" data-tab="teamC">Team C</button>
+            <button class="tab-btn px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition" data-tab="teamD">Team D</button>
+            <button class="tab-btn px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition" data-tab="teamE">Team E</button>
+            <button class="tab-btn px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition" data-tab="teamH">Team H</button>
+            <button class="tab-btn px-6 py-3 font-semibold text-sm border-b-2 border-transparent text-gray-600 hover:text-gray-900 transition" data-tab="teamI">Team I</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tabContent">
+            <!-- Overview Tab -->
+            <div class="tab-pane active" id="overview" role="tabpanel">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <!-- KPI Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                            <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total On Hire</div>
+                            <div class="text-4xl font-bold text-blue-600">6</div>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                            <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Alert</div>
+                            <div class="text-4xl font-bold text-red-600">6</div>
+                        </div>
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                            <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Deficiency</div>
+                            <div class="text-4xl font-bold text-amber-600">23</div>
+                        </div>
+                    </div>
+
+                    <!-- Alarm Log -->
+                    <div class="bg-white rounded-lg border border-gray-200 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Alarm Log (all teams)</h3>
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height: 280px;">
+                            <table class="min-w-full text-sm" id="overviewAlarmLog">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel Team</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Engine</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Issue</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team C Tab -->
+            <div class="tab-pane" id="teamC" role="tabpanel" style="display: none;">
+                <div class="space-y-6">
+                    <!-- Alarm Log -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Alarm Log - Team C</h3>
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height: 280px;">
+                            <table class="min-w-full text-sm" id="teamCAlarmLog">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Engine</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Issue</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- KPI Overview -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Overview - Team C</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total On Hire</div>
+                                <div class="text-3xl font-bold text-blue-600" id="teamCOnHire">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Alert</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamCAlert">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Deficiency</div>
+                                <div class="text-3xl font-bold text-amber-600" id="teamCDeficiency">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Monitor</div>
+                                <div class="text-3xl font-bold text-yellow-600" id="teamCOilMonitor">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Passed</div>
+                                <div class="text-3xl font-bold text-green-600" id="teamCOilPassed">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Failed</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamCOilFailed">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Metrics -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Technical Metrics - Team C</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-sm" id="teamCGrid">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200">
+                                    <tr>
+                                        <th class="px-3 py-2 text-left font-semibold text-gray-700 sticky left-0 bg-gray-50 z-10 text-xs">Engine</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">RPM</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Oil P&T</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Fuel P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">EGT</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">TC Temp</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">SCAV P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">HT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">LT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Start Sys</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team D Tab -->
+            <div class="tab-pane" id="teamD" role="tabpanel" style="display: none;">
+                <div class="space-y-6">
+                    <!-- Alarm Log -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Alarm Log - Team D</h3>
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height: 280px;">
+                            <table class="min-w-full text-sm" id="teamDAlarmLog">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Engine</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Issue</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- KPI Overview -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Overview - Team D</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total On Hire</div>
+                                <div class="text-3xl font-bold text-blue-600" id="teamDOnHire">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Alert</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamDAlert">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Deficiency</div>
+                                <div class="text-3xl font-bold text-amber-600" id="teamDDeficiency">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Monitor</div>
+                                <div class="text-3xl font-bold text-yellow-600" id="teamDOilMonitor">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Passed</div>
+                                <div class="text-3xl font-bold text-green-600" id="teamDOilPassed">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Failed</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamDOilFailed">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Metrics -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Technical Metrics - Team D</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-sm" id="teamDGrid">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200">
+                                    <tr>
+                                        <th class="px-3 py-2 text-left font-semibold text-gray-700 sticky left-0 bg-gray-50 z-10 text-xs">Engine</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">RPM</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Oil P&T</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Fuel P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">EGT</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">TC Temp</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">SCAV P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">HT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">LT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Start Sys</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team E Tab -->
+            <div class="tab-pane" id="teamE" role="tabpanel" style="display: none;">
+                <div class="space-y-6">
+                    <!-- Alarm Log -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Alarm Log - Team E</h3>
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height: 280px;">
+                            <table class="min-w-full text-sm" id="teamEAlarmLog">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Engine</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Issue</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- KPI Overview -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Overview - Team E</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total On Hire</div>
+                                <div class="text-3xl font-bold text-blue-600" id="teamEOnHire">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Alert</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamEAlert">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Deficiency</div>
+                                <div class="text-3xl font-bold text-amber-600" id="teamEDeficiency">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Monitor</div>
+                                <div class="text-3xl font-bold text-yellow-600" id="teamEOilMonitor">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Passed</div>
+                                <div class="text-3xl font-bold text-green-600" id="teamEOilPassed">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Failed</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamEOilFailed">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Metrics -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Technical Metrics - Team E</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-sm" id="teamEGrid">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200">
+                                    <tr>
+                                        <th class="px-3 py-2 text-left font-semibold text-gray-700 sticky left-0 bg-gray-50 z-10 text-xs">Engine</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">RPM</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Oil P&T</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Fuel P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">EGT</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">TC Temp</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">SCAV P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">HT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">LT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Start Sys</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team H Tab -->
+            <div class="tab-pane" id="teamH" role="tabpanel" style="display: none;">
+                <div class="space-y-6">
+                    <!-- Alarm Log -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Alarm Log - Team H</h3>
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height: 280px;">
+                            <table class="min-w-full text-sm" id="teamHAlarmLog">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Engine</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Issue</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- KPI Overview -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Overview - Team H</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total On Hire</div>
+                                <div class="text-3xl font-bold text-blue-600" id="teamHOnHire">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Alert</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamHAlert">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Deficiency</div>
+                                <div class="text-3xl font-bold text-amber-600" id="teamHDeficiency">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Monitor</div>
+                                <div class="text-3xl font-bold text-yellow-600" id="teamHOilMonitor">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Passed</div>
+                                <div class="text-3xl font-bold text-green-600" id="teamHOilPassed">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Failed</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamHOilFailed">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Metrics -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Technical Metrics - Team H</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-sm" id="teamHGrid">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200">
+                                    <tr>
+                                        <th class="px-3 py-2 text-left font-semibold text-gray-700 sticky left-0 bg-gray-50 z-10 text-xs">Engine</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">RPM</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Oil P&T</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Fuel P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">EGT</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">TC Temp</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">SCAV P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">HT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">LT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Start Sys</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team I Tab -->
+            <div class="tab-pane" id="teamI" role="tabpanel" style="display: none;">
+                <div class="space-y-6">
+                    <!-- Alarm Log -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Alarm Log - Team I</h3>
+                        <div class="overflow-x-auto overflow-y-auto" style="max-height: 280px;">
+                            <table class="min-w-full text-sm" id="teamIAlarmLog">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Vessel</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Engine</th>
+                                        <th class="px-4 py-3 text-left font-semibold text-gray-700">Issue</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- KPI Overview -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Overview - Team I</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total On Hire</div>
+                                <div class="text-3xl font-bold text-blue-600" id="teamIOnHire">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Alert</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamIAlert">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Total Deficiency</div>
+                                <div class="text-3xl font-bold text-amber-600" id="teamIDeficiency">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Monitor</div>
+                                <div class="text-3xl font-bold text-yellow-600" id="teamIOilMonitor">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Passed</div>
+                                <div class="text-3xl font-bold text-green-600" id="teamIOilPassed">0</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
+                                <div class="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">Lube Oil Failed</div>
+                                <div class="text-3xl font-bold text-red-600" id="teamIOilFailed">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Metrics -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Technical Metrics - Team I</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full text-sm" id="teamIGrid">
+                                <thead class="bg-gray-50 border-b-2 border-gray-200">
+                                    <tr>
+                                        <th class="px-3 py-2 text-left font-semibold text-gray-700 sticky left-0 bg-gray-50 z-10 text-xs">Engine</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">RPM</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Oil P&T</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Fuel P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">EGT</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">TC Temp</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">SCAV P</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">HT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">LT Cool</th>
+                                        <th class="px-3 py-2 text-center font-semibold text-gray-700 border-l border-gray-200 text-xs">Start Sys</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
