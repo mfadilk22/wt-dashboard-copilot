@@ -720,43 +720,155 @@
                 </div>
 
                 <!-- PMS Achievement -->
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">PMS (Planned Maintenance System)</h3>
-                    <div class="space-y-3">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Main Engine</span>
-                                <span class="text-sm font-semibold text-blue-600">87%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="bg-blue-600 h-2 rounded-full" style="width: 87%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Auxiliary Engine</span>
-                                <span class="text-sm font-semibold text-blue-600">92%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="bg-blue-600 h-2 rounded-full" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Generator Set</span>
-                                <span class="text-sm font-semibold text-blue-600">78%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="bg-blue-600 h-2 rounded-full" style="width: 78%"></div>
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-6">Planned Maintenance System</h3>
+                        
+                        <!-- PMS Outstanding -->
+                        <div class="mb-8">
+                            <h4 class="text-base font-medium text-gray-700 mb-4">PMS Outstanding</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+                                    <div class="text-sm font-medium text-red-700 mb-2">Overdue</div>
+                                    <div class="text-3xl font-bold text-red-600">12</div>
+                                </div>
+                                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 text-center">
+                                    <div class="text-sm font-medium text-yellow-700 mb-2">Due This Month</div>
+                                    <div class="text-3xl font-bold text-yellow-600">24</div>
+                                </div>
+                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                                    <div class="text-sm font-medium text-blue-700 mb-2">Upcoming</div>
+                                    <div class="text-3xl font-bold text-blue-600">38</div>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- PMS Achieve vs Target - Last 6 Months Chart -->
                         <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-sm font-medium text-gray-700">Boiler</span>
-                                <span class="text-sm font-semibold text-blue-600">71%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="bg-blue-600 h-2 rounded-full" style="width: 71%"></div>
+                            <h4 class="text-base font-medium text-gray-700 mb-6">PMS Achieve vs Target - Last 6 Months</h4>
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 overflow-x-auto">
+                                <!-- Chart Legend -->
+                                <div class="flex gap-6 mb-6">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-4 h-4 bg-green-500 rounded"></div>
+                                        <span class="text-sm text-gray-600">Target</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-4 h-4 bg-blue-600 rounded"></div>
+                                        <span class="text-sm text-gray-600">Achieved</span>
+                                    </div>
+                                </div>
+
+                                <!-- Chart Container -->
+                                <div class="min-w-max">
+                                    <div style="display: flex; gap: 2px; height: 300px; align-items: flex-end; border-left: 2px solid #ccc; border-bottom: 2px solid #ccc; padding: 20px;">
+                                        <!-- October -->
+                                        <div style="flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                            <div style="width: 100%; display: flex; justify-content: center; gap: 2px; height: 200px;">
+                                                <!-- Team C -->
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px; align-items: center;">
+                                                    <div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div>
+                                                    <div style="width: 100%; height: 165px; background: #2563eb; opacity: 0.7;"></div>
+                                                </div>
+                                                <!-- Team D -->
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px; align-items: center;">
+                                                    <div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div>
+                                                    <div style="width: 100%; height: 176px; background: #2563eb; opacity: 0.7;"></div>
+                                                </div>
+                                                <!-- Team E -->
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px; align-items: center;">
+                                                    <div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div>
+                                                    <div style="width: 100%; height: 158px; background: #2563eb; opacity: 0.7;"></div>
+                                                </div>
+                                                <!-- Team H -->
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px; align-items: center;">
+                                                    <div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div>
+                                                    <div style="width: 100%; height: 182px; background: #2563eb; opacity: 0.7;"></div>
+                                                </div>
+                                                <!-- Team I -->
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px; align-items: center;">
+                                                    <div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div>
+                                                    <div style="width: 100%; height: 168px; background: #2563eb; opacity: 0.7;"></div>
+                                                </div>
+                                            </div>
+                                            <span class="text-xs font-medium text-gray-600" style="white-space: nowrap;">Oct</span>
+                                        </div>
+
+                                        <!-- November -->
+                                        <div style="flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                            <div style="width: 100%; display: flex; justify-content: center; gap: 2px; height: 200px;">
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 172px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 175px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 160px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 180px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 170px; background: #2563eb; opacity: 0.7;"></div></div>
+                                            </div>
+                                            <span class="text-xs font-medium text-gray-600" style="white-space: nowrap;">Nov</span>
+                                        </div>
+
+                                        <!-- December -->
+                                        <div style="flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                            <div style="width: 100%; display: flex; justify-content: center; gap: 2px; height: 200px;">
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 168px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 180px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 155px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 185px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 172px; background: #2563eb; opacity: 0.7;"></div></div>
+                                            </div>
+                                            <span class="text-xs font-medium text-gray-600" style="white-space: nowrap;">Dec</span>
+                                        </div>
+
+                                        <!-- January -->
+                                        <div style="flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                            <div style="width: 100%; display: flex; justify-content: center; gap: 2px; height: 200px;">
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 170px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 178px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 162px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 188px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 175px; background: #2563eb; opacity: 0.7;"></div></div>
+                                            </div>
+                                            <span class="text-xs font-medium text-gray-600" style="white-space: nowrap;">Jan</span>
+                                        </div>
+
+                                        <!-- February -->
+                                        <div style="flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                            <div style="width: 100%; display: flex; justify-content: center; gap: 2px; height: 200px;">
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 174px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 182px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 158px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 190px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 180px; background: #2563eb; opacity: 0.7;"></div></div>
+                                            </div>
+                                            <span class="text-xs font-medium text-gray-600" style="white-space: nowrap;">Feb</span>
+                                        </div>
+
+                                        <!-- March -->
+                                        <div style="flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                            <div style="width: 100%; display: flex; justify-content: center; gap: 2px; height: 200px;">
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 176px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 184px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 152px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 192px; background: #2563eb; opacity: 0.7;"></div></div>
+                                                <div style="width: 12px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px;"><div style="width: 100%; height: 170px; background: #22c55e; opacity: 0.7;"></div><div style="width: 100%; height: 178px; background: #2563eb; opacity: 0.7;"></div></div>
+                                            </div>
+                                            <span class="text-xs font-medium text-gray-600" style="white-space: nowrap;">Mar</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Y-axis labels -->
+                                    <div style="display: flex; gap: 10px; margin-top: 10px; padding-left: 40px;">
+                                        <span class="text-xs text-gray-500">0%</span>
+                                        <span class="text-xs text-gray-500" style="margin-left: 205px;">50%</span>
+                                        <span class="text-xs text-gray-500" style="margin-left: 200px;">100%</span>
+                                    </div>
+                                </div>
+
+                                <!-- Team Legend -->
+                                <div class="mt-6 pt-4 border-t border-gray-200">
+                                    <p class="text-xs text-gray-600 mb-2">
+                                        <strong>Bar Groups (per month):</strong> Team C | Team D | Team E | Team H | Team I
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
