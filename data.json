@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "name": "Vessel Monitoring Dashboard",
+    "version": "1.0",
+    "dataFormat": "metabase"
+  },
+  "alarmLog": [
+    {
+      "timestamp": "2026-04-10 14:32:15",
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "ME 1",
+      "issue": "Fuel P caution",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 14:15:45",
+      "vessel": "WM Kalimantan",
+      "vessel_team": "Team D",
+      "engine": "AE 1",
+      "issue": "Oil P&T low",
+      "priority": "alert"
+    },
+    {
+      "timestamp": "2026-04-10 13:50:22",
+      "vessel": "WM Java",
+      "vessel_team": "Team E",
+      "engine": "ME 2",
+      "issue": "EGT watch",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 13:22:08",
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "AE 1",
+      "issue": "Scavenge pressure low",
+      "priority": "alert"
+    },
+    {
+      "timestamp": "2026-04-10 12:45:30",
+      "vessel": "WM Kalimantan",
+      "vessel_team": "Team D",
+      "engine": "ME 1",
+      "issue": "TC temp elevated",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 12:20:15",
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "ME 2",
+      "issue": "HT cooler temp high",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 11:55:42",
+      "vessel": "WM Bandung",
+      "vessel_team": "Team C",
+      "engine": "ME 1",
+      "issue": "RPM variation",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 11:30:08",
+      "vessel": "WM Kalimantan",
+      "vessel_team": "Team D",
+      "engine": "ME 2",
+      "issue": "Fuel P deviation",
+      "priority": "alert"
+    },
+    {
+      "timestamp": "2026-04-10 11:05:33",
+      "vessel": "WM Medan",
+      "vessel_team": "Team D",
+      "engine": "AE 1",
+      "issue": "Oil pressure low",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 10:40:22",
+      "vessel": "WM Java",
+      "vessel_team": "Team E",
+      "engine": "ME 1",
+      "issue": "Turbo inlet temp high",
+      "priority": "alert"
+    },
+    {
+      "timestamp": "2026-04-10 10:15:55",
+      "vessel": "WM Makassar",
+      "vessel_team": "Team E",
+      "engine": "AE 1",
+      "issue": "Scavenge pressure low",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 09:50:11",
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "AE 1",
+      "issue": "Fuel filter clogging",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 09:25:44",
+      "vessel": "WM Surabaya",
+      "vessel_team": "Team H",
+      "engine": "ME 1",
+      "issue": "EGT elevated",
+      "priority": "alert"
+    },
+    {
+      "timestamp": "2026-04-10 09:00:19",
+      "vessel": "WM Kalimantan",
+      "vessel_team": "Team D",
+      "engine": "ME 1",
+      "issue": "Cylinder pressure deviation",
+      "priority": "caution"
+    },
+    {
+      "timestamp": "2026-04-10 08:35:56",
+      "vessel": "WM Java",
+      "vessel_team": "Team E",
+      "engine": "ME 2",
+      "issue": "Lube oil contamination",
+      "priority": "alert"
+    }
+  ],
+  "technicalMetrics": [
+    {
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 520, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.3b", "temp": "68°C", "status": "ok" },
+      "fuel_p": { "value": "2.9b", "status": "caution", "note": "caution" },
+      "egt": { "value": "485°", "status": "avg", "note": "Cyls!" },
+      "tc_temp": { "value": "312°", "status": "inlet" },
+      "scav_p": { "value": "1.8b", "status": "ok" },
+      "ht_cool": { "value": "78°C", "status": "ok" },
+      "lt_cool": { "value": "42°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "ME 2 Main",
+      "rpm": { "value": 510, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.1b", "temp": "70°C", "status": "ok" },
+      "fuel_p": { "value": "3.2b", "status": "ok" },
+      "egt": { "value": "420°", "status": "avg" },
+      "tc_temp": { "value": "290°", "status": "inlet" },
+      "scav_p": { "value": "1.9b", "status": "ok" },
+      "ht_cool": { "value": "76°C", "status": "ok" },
+      "lt_cool": { "value": "40°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "AE 1 Aux",
+      "rpm": { "value": 1500, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "3.8b", "temp": "65°C", "status": "ok" },
+      "fuel_p": { "value": "3.0b", "status": "ok" },
+      "egt": { "value": "390°", "status": "avg" },
+      "tc_temp": { "value": "280°", "status": "inlet" },
+      "scav_p": { "value": "1.7b", "status": "ok" },
+      "ht_cool": { "value": "74°C", "status": "ok" },
+      "lt_cool": { "value": "39°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Sulawesi",
+      "vessel_team": "Team C",
+      "engine": "AE 2 Aux",
+      "rpm": { "value": null, "unit": "standby" },
+      "oil_pt": { "value": null, "status": "standby" },
+      "fuel_p": { "value": null, "status": "standby" },
+      "egt": { "value": null, "status": "standby" },
+      "tc_temp": { "value": null, "status": "standby" },
+      "scav_p": { "value": null, "status": "standby" },
+      "ht_cool": { "value": null, "status": "standby" },
+      "lt_cool": { "value": null, "status": "standby" },
+      "start_sys": { "value": null, "status": "standby" }
+    },
+    {
+      "vessel": "WM Kalimantan",
+      "vessel_team": "Team D",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 505, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.0b", "temp": "66°C", "status": "ok" },
+      "fuel_p": { "value": "3.1b", "status": "ok" },
+      "egt": { "value": "415°", "status": "avg" },
+      "tc_temp": { "value": "295°", "status": "inlet" },
+      "scav_p": { "value": "1.8b", "status": "ok" },
+      "ht_cool": { "value": "77°C", "status": "ok" },
+      "lt_cool": { "value": "41°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Kalimantan",
+      "vessel_team": "Team D",
+      "engine": "AE 1 Aux",
+      "rpm": { "value": 1480, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "2.1b", "temp": "72°C", "status": "caution", "note": "low!" },
+      "fuel_p": { "value": "3.0b", "status": "ok" },
+      "egt": { "value": "402°", "status": "avg" },
+      "tc_temp": { "value": "285°", "status": "inlet" },
+      "scav_p": { "value": "1.7b", "status": "ok" },
+      "ht_cool": { "value": "75°C", "status": "ok" },
+      "lt_cool": { "value": "40°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Java",
+      "vessel_team": "Team E",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 518, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.2b", "temp": "67°C", "status": "ok" },
+      "fuel_p": { "value": "3.2b", "status": "ok" },
+      "egt": { "value": "418°", "status": "avg" },
+      "tc_temp": { "value": "300°", "status": "inlet" },
+      "scav_p": { "value": "1.9b", "status": "ok" },
+      "ht_cool": { "value": "76°C", "status": "ok" },
+      "lt_cool": { "value": "41°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Java",
+      "vessel_team": "Team E",
+      "engine": "ME 2 Main",
+      "rpm": { "value": 512, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.1b", "temp": "69°C", "status": "ok" },
+      "fuel_p": { "value": "3.1b", "status": "ok" },
+      "egt": { "value": "441°", "status": "watch", "note": "watch" },
+      "tc_temp": { "value": "298°", "status": "inlet" },
+      "scav_p": { "value": "1.8b", "status": "ok" },
+      "ht_cool": { "value": "77°C", "status": "ok" },
+      "lt_cool": { "value": "42°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Bandung",
+      "vessel_team": "Team C",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 515, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.4b", "temp": "66°C", "status": "ok" },
+      "fuel_p": { "value": "3.0b", "status": "ok" },
+      "egt": { "value": "430°", "status": "avg" },
+      "tc_temp": { "value": "305°", "status": "inlet" },
+      "scav_p": { "value": "1.9b", "status": "ok" },
+      "ht_cool": { "value": "75°C", "status": "ok" },
+      "lt_cool": { "value": "40°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Bandung",
+      "vessel_team": "Team C",
+      "engine": "AE 1 Aux",
+      "rpm": { "value": 1520, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "3.9b", "temp": "63°C", "status": "ok" },
+      "fuel_p": { "value": "2.8b", "status": "ok" },
+      "egt": { "value": "405°", "status": "avg" },
+      "tc_temp": { "value": "288°", "status": "inlet" },
+      "scav_p": { "value": "1.8b", "status": "ok" },
+      "ht_cool": { "value": "72°C", "status": "ok" },
+      "lt_cool": { "value": "38°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Medan",
+      "vessel_team": "Team D",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 508, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.2b", "temp": "65°C", "status": "ok" },
+      "fuel_p": { "value": "3.2b", "status": "ok" },
+      "egt": { "value": "425°", "status": "avg" },
+      "tc_temp": { "value": "300°", "status": "inlet" },
+      "scav_p": { "value": "1.8b", "status": "ok" },
+      "ht_cool": { "value": "78°C", "status": "ok" },
+      "lt_cool": { "value": "42°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Medan",
+      "vessel_team": "Team D",
+      "engine": "ME 2 Main",
+      "rpm": { "value": 502, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.0b", "temp": "67°C", "status": "ok" },
+      "fuel_p": { "value": "3.1b", "status": "ok" },
+      "egt": { "value": "412°", "status": "avg" },
+      "tc_temp": { "value": "292°", "status": "inlet" },
+      "scav_p": { "value": "1.7b", "status": "ok" },
+      "ht_cool": { "value": "76°C", "status": "ok" },
+      "lt_cool": { "value": "41°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Makassar",
+      "vessel_team": "Team E",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 522, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.5b", "temp": "68°C", "status": "ok" },
+      "fuel_p": { "value": "3.3b", "status": "ok" },
+      "egt": { "value": "440°", "status": "avg" },
+      "tc_temp": { "value": "310°", "status": "inlet" },
+      "scav_p": { "value": "2.0b", "status": "ok" },
+      "ht_cool": { "value": "79°C", "status": "ok" },
+      "lt_cool": { "value": "43°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Makassar",
+      "vessel_team": "Team E",
+      "engine": "AE 1 Aux",
+      "rpm": { "value": 1510, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "3.7b", "temp": "64°C", "status": "ok" },
+      "fuel_p": { "value": "2.9b", "status": "ok" },
+      "egt": { "value": "395°", "status": "avg" },
+      "tc_temp": { "value": "282°", "status": "inlet" },
+      "scav_p": { "value": "1.6b", "status": "ok" },
+      "ht_cool": { "value": "73°C", "status": "ok" },
+      "lt_cool": { "value": "38°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Surabaya",
+      "vessel_team": "Team H",
+      "engine": "ME 1 Main",
+      "rpm": { "value": 512, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "4.3b", "temp": "66°C", "status": "ok" },
+      "fuel_p": { "value": "3.1b", "status": "ok" },
+      "egt": { "value": "428°", "status": "avg" },
+      "tc_temp": { "value": "302°", "status": "inlet" },
+      "scav_p": { "value": "1.9b", "status": "ok" },
+      "ht_cool": { "value": "77°C", "status": "ok" },
+      "lt_cool": { "value": "41°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    },
+    {
+      "vessel": "WM Surabaya",
+      "vessel_team": "Team H",
+      "engine": "AE 1 Aux",
+      "rpm": { "value": 1495, "unit": "rpm", "status": "ok" },
+      "oil_pt": { "value": "3.6b", "temp": "61°C", "status": "ok" },
+      "fuel_p": { "value": "2.7b", "status": "ok" },
+      "egt": { "value": "388°", "status": "avg" },
+      "tc_temp": { "value": "280°", "status": "inlet" },
+      "scav_p": { "value": "1.7b", "status": "ok" },
+      "ht_cool": { "value": "71°C", "status": "ok" },
+      "lt_cool": { "value": "37°C", "status": "ok" },
+      "start_sys": { "value": "ok", "voltage": "24V" }
+    }
+  ],
+  "teamMapping": {
+    "Team C": ["WM Sulawesi", "WM Bandung"],
+    "Team D": ["WM Kalimantan", "WM Medan"],
+    "Team E": ["WM Java", "WM Makassar"],
+    "Team H": ["WM Sulawesi", "WM Kalimantan", "WM Surabaya"],
+    "Team I": ["WM Kalimantan", "WM Java"]
+  },
+  "kpis": {
+    "total_on_hire": 6,
+    "total_alert": 6,
+    "total_deficiency": 23
+  }
+}
