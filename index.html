@@ -469,7 +469,7 @@
         <!-- MMR Mode -->
         <div id="mmr-mode" class="mode-container" style="display: none;">
             <!-- MMR Dashboard Content -->
-            <div class="bg-white rounded-lg shadow-sm p-6 space-y-6">
+            <div class="bg-white rounded-lg shadow-sm p-6 space-y-12">
                 <!-- KPI Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg p-6 text-center">
@@ -498,7 +498,14 @@
 
                 <!-- Engine Data Metrics -->
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Engine Data Metrics — Real-Time Vitals</h3>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Engine Data Metrics — Real-Time Vitals</h3>
+                        <div class="flex gap-2" id="engineFilterTabs">
+                            <button class="engine-filter-btn active px-4 py-2 text-xs font-semibold border rounded transition" data-engine="all">All Engines</button>
+                            <button class="engine-filter-btn px-4 py-2 text-xs font-semibold border rounded transition" data-engine="main">Main Engine</button>
+                            <button class="engine-filter-btn px-4 py-2 text-xs font-semibold border rounded transition" data-engine="aux">Auxiliary</button>
+                        </div>
+                    </div>
                     <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
                         <div class="bg-gray-50 border border-gray-200 rounded p-4 text-center">
                             <div class="text-xs font-medium text-gray-600 mb-2">RPM</div>

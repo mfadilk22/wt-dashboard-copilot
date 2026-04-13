@@ -48,6 +48,26 @@
     display: none;
 }
 
+/* Engine Filter Tabs */
+.engine-filter-btn {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.engine-filter-btn:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+    color: #374151;
+}
+
+.engine-filter-btn.active {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;

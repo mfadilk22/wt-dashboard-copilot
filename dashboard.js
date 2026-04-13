@@ -16,6 +16,8 @@ class Dashboard {
             console.log('Global navigation attached');
             this.attachTabEventListeners();
             console.log('Tab listeners attached');
+            this.attachEngineFilterListeners();
+            console.log('Engine filter listeners attached');
             this.populateOverviewTab();
             console.log('Overview tab populated');
             this.setupTeamTabs();
@@ -96,8 +98,32 @@ class Dashboard {
                 btn.classList.add('text-gray-700', 'bg-white', 'hover:bg-gray-50');
             }
         });
+    }
 
-        this.currentTeam = tabName;
+    attachEngineFilterListeners() {
+        const filterBtns = document.querySelectorAll('.engine-filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const engine = e.target.getAttribute('data-engine');
+                this.filterEngines(engine);
+            });
+        });
+    }
+
+    filterEngines(engineType) {
+        // Update active button
+        const filterBtns = document.querySelectorAll('.engine-filter-btn');
+        filterBtns.forEach(btn => {
+            const isActive = btn.getAttribute('data-engine') === engineType;
+            if (isActive) {
+                btn.classList.add('bg-blue-600', 'border-blue-600', 'text-white');
+                btn.classList.remove('bg-white', 'border-gray-300', 'text-gray-600', 'hover:bg-gray-50');
+            } else {
+                btn.classList.remove('bg-blue-600', 'border-blue-600', 'text-white');
+                btn.classList.add('bg-white', 'border-gray-300', 'text-gray-600');
+            }
+        });
+        console.log(`Filtered to engine: ${engineType}`);
     }
 
     async loadData() {
